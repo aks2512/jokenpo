@@ -1,0 +1,27 @@
+.home {
+    padding-top: 153px;
+    padding-bottom: 125px;
+}
+
+.home .banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home .banner .image img {
+    max-width: 624px;
+    width: 100%;
+}
+
+.home .banner .content {
+    max-width: 510px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .home .banner {
+        flex-direction: row;
+    }
+}

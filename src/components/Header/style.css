@@ -1,0 +1,34 @@
+header {
+    margin-top: 70px;
+}
+
+header .logo img {
+    width: 167px;
+    height: 85px;
+}
+
+header .button__github {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 420px;
+    padding: 29px 63px;
+    background-color: rgba(31, 203, 238, 0.1);
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: start;
+}
+
+header .button__github::after {
+    content: "";
+    display: inline-block;
+    background-image: url(assets/images/entrar.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+}

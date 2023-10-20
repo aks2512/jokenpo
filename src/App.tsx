@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "pages/Home";
+import { PageBase } from "components/PageBase";
+import { Game } from "pages/Game";
+import { Winner } from "pages/Winner";
+import AuthProvider from "contexts/auth";
 
-function App() {
+function AppRoutes() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<PageBase />}>
+            <Route index element={<Home />} />
+            <Route path="jogo" element={<Game />} />
+            <Route path="vencedor" element={<Winner />} />
+          </Route>
+        </Routes>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default AppRoutes;
